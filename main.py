@@ -3,7 +3,7 @@ from pypdf import PdfReader
 import os
 
 # 1. إعداد المفتاح (ضع مفتاحك السري بين علامات التنصيص)
-genai.configure(api_key="AQ.Ab8RN6KoHe1uuSawFrWK6xKQ4xq3kfEYfSqCB1XLY9KqmiXFwg")
+genai.configure(api_key="place your API key here")
 
 # 2. تعريف الموديل
 model = genai.GenerativeModel('gemini-3.5-flash')
