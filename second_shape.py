@@ -134,11 +134,17 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-# ==========================================
-# 2. إعداد المفتاح السري والموديل
-# ==========================================
 
-genai.configure(api_key=GIMINIAPI) 
+import os
+from dotenv import load_dotenv
+
+# فتح ملف الخزنة السرية
+load_dotenv()
+
+# إعداد المفتاح السري والموديل
+# ==========================================
+GIMINIAPI = os.getenv("GIMINIAPI")
+genai.configure(api_key=GIMINIAPI)
 model = genai.GenerativeModel('gemini-3.1-flash-lite') 
 
 # ==========================================
